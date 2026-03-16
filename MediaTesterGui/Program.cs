@@ -37,9 +37,7 @@ namespace KrahmerSoft.MediaTesterGui
 					if (string.IsNullOrEmpty(language))
 						language = Thread.CurrentThread.CurrentCulture.Name;
 
-					if (language?.Length > 2)
-						language = language.Substring(0, 2);
-
+					// Don't truncate language code - full culture names like "zh-CN" are needed for proper resource loading
 					if (Thread.CurrentThread.CurrentCulture.Name != language)
 					{
 						Thread.CurrentThread.CurrentCulture =
