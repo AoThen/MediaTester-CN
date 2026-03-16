@@ -664,7 +664,7 @@
     <value>8</value>
   </data>
   <data name="AbortButton.Text" xml:space="preserve">
-    <value>中止</value>
+    <value>Abort</value>
   </data>
   <data name="AbortButton.ToolTip" xml:space="preserve">
     <value>Abort the current operation.</value>
@@ -688,7 +688,7 @@
     <value>4</value>
   </data>
   <data name="AboutButton.Text" xml:space="preserve">
-    <value>关于</value>
+    <value>About</value>
   </data>
   <data name="AboutButton.ToolTip" xml:space="preserve">
     <value>Show the about and copyright dialog.</value>
@@ -748,7 +748,7 @@
     <value>3</value>
   </data>
   <data name="DefaultOptionsButton.Text" xml:space="preserve">
-    <value>默认</value>
+    <value>Defaults</value>
   </data>
   <data name="DefaultOptionsButton.ToolTip" xml:space="preserve">
     <value>Restore default application options.</value>
@@ -769,7 +769,7 @@
     <value>10</value>
   </data>
   <data name="ElapsedLabel.Text" xml:space="preserve">
-    <value>已用</value>
+    <value>Elapsed</value>
   </data>
   <data name="ElapsedTimeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -823,7 +823,7 @@
     <value>4</value>
   </data>
   <data name="FailedLabel.Text" xml:space="preserve">
-    <value>失败</value>
+    <value>Failed</value>
   </data>
   <data name="LanguageComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -877,7 +877,7 @@
     <value>6</value>
   </data>
   <data name="QuickFirstFailingByteMethodCheckBox.Text" xml:space="preserve">
-    <value>快速找到首个失败字节</value>
+    <value>Quick first failing byte method</value>
   </data>
   <data name="QuickFirstFailingByteMethodCheckBox.ToolTip" xml:space="preserve">
     <value>If a failure is encountered, skip testing all written files from the beginning.
@@ -900,7 +900,7 @@ Search for the last successful byte in reverse instead.
     <value>5</value>
   </data>
   <data name="QuickTestAfterEachFileCheckBox.Text" xml:space="preserve">
-    <value>每写一个GiB后快速测试</value>
+    <value>Quick test after each GiB written</value>
   </data>
   <data name="QuickTestAfterEachFileCheckBox.ToolTip" xml:space="preserve">
     <value>Performs brief spot checks as data is written.
@@ -923,7 +923,7 @@ Enabling this will detect common failures much faster.
     <value>1</value>
   </data>
   <data name="ReadAverageLabel.Text" xml:space="preserve">
-    <value>读平均</value>
+    <value>Read Avg</value>
   </data>
   <data name="ReadBytesPerSecondStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 17</value>
@@ -965,7 +965,7 @@ Enabling this will detect common failures much faster.
     <value>12</value>
   </data>
   <data name="RemainingLabel.Text" xml:space="preserve">
-    <value>剩余</value>
+    <value>Remaining</value>
   </data>
   <data name="RemoveTempDataFilesButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -983,7 +983,7 @@ Enabling this will detect common failures much faster.
     <value>5</value>
   </data>
   <data name="RemoveTempDataFilesButton.Text" xml:space="preserve">
-    <value>删除临时文件</value>
+    <value>Remove Temp Files</value>
   </data>
   <data name="RemoveTempDataFilesButton.ToolTip" xml:space="preserve">
     <value>Only files created by MediaTester will be removed.</value>
@@ -1004,7 +1004,7 @@ Enabling this will detect common failures much faster.
     <value>7</value>
   </data>
   <data name="RemoveTempDataFilesUponCompletionCheckBox.Text" xml:space="preserve">
-    <value>完成后删除临时文件</value>
+    <value>Remove temp files upon completion</value>
   </data>
   <data name="RemoveTempDataFilesUponCompletionCheckBox.ToolTip" xml:space="preserve">
     <value>Remove temporary data files after verification completion (pass or fail).</value>
@@ -1022,7 +1022,7 @@ Enabling this will detect common failures much faster.
     <value>2</value>
   </data>
   <data name="SaveOptionsButton.Text" xml:space="preserve">
-    <value>保存配置</value>
+    <value>Save Options</value>
   </data>
   <data name="SaveOptionsButton.ToolTip" xml:space="preserve">
     <value>Save current options as deafults for next launch.</value>
@@ -1043,7 +1043,7 @@ Enabling this will detect common failures much faster.
     <value>8</value>
   </data>
   <data name="SaveTestResultsFileToMediaCheckBox.Text" xml:space="preserve">
-    <value>测试结果保存到根目录</value>
+    <value>Save test results to media root</value>
   </data>
   <data name="SaveTestResultsFileToMediaCheckBox.ToolTip" xml:space="preserve">
     <value>Save test results file to media with full test log output.
@@ -1069,7 +1069,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>19</value>
   </data>
   <data name="StatisticsGroupBox.Text" xml:space="preserve">
-    <value>统计数据</value>
+    <value>Statistics</value>
   </data>
   <data name="StatusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 374</value>
@@ -1102,7 +1102,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>4</value>
   </data>
   <data name="StopProcessingOnFailureCheckBox.Text" xml:space="preserve">
-    <value>首次失败时停止</value>
+    <value>Stop on first failure</value>
   </data>
   <data name="StopProcessingOnFailureCheckBox.ToolTip" xml:space="preserve">
     <value>Stop the test process after a single failure.
@@ -1142,7 +1142,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>10</value>
   </data>
   <data name="TargetAvailableBytesLabelLabel.Text" xml:space="preserve">
-    <value>可用空间</value>
+    <value>Available Space</value>
   </data>
   <data name="TargetLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1160,7 +1160,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>0</value>
   </data>
   <data name="TargetLabel.Text" xml:space="preserve">
-    <value>目标</value>
+    <value>Target</value>
   </data>
   <data name="TargetLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1214,7 +1214,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>9</value>
   </data>
   <data name="TargetTotalBytesLabelLabel.Text" xml:space="preserve">
-    <value>总大小</value>
+    <value>Total Size</value>
   </data>
   <data name="TestOptionsGgroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1235,7 +1235,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>1</value>
   </data>
   <data name="TestOptionsGgroupBox.Text" xml:space="preserve">
-    <value>测试选项</value>
+    <value>Test Options</value>
   </data>
   <data name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>147, 17</value>
@@ -1256,7 +1256,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>5</value>
   </data>
   <data name="TotalBytesToTestLabel.Text" xml:space="preserve">
-    <value>总测试Bytes</value>
+    <value>Total Bytes to Test</value>
   </data>
   <data name="TotalBytesToTestLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1313,7 +1313,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>3</value>
   </data>
   <data name="VerifiedLabel.Text" xml:space="preserve">
-    <value>已验证</value>
+    <value>Verified</value>
   </data>
   <data name="VerifyOnlyButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1331,7 +1331,7 @@ Temp test data files will be removed, if necessary, to create space for the test
     <value>7</value>
   </data>
   <data name="VerifyOnlyButton.Text" xml:space="preserve">
-    <value>仅校验</value>
+    <value>Verify Only</value>
   </data>
   <data name="VerifyOnlyButton.ToolTip" xml:space="preserve">
     <value>Verify previous written test data.
@@ -1353,7 +1353,7 @@ Will not write anything to media.</value>
     <value>6</value>
   </data>
   <data name="WriteAndVerifyButton.Text" xml:space="preserve">
-    <value>写后校验</value>
+    <value>Write &amp; Verify</value>
   </data>
   <data name="WriteAndVerifyButton.ToolTip" xml:space="preserve">
     <value>Write test data to media then read back to verify data was stored correctly.
@@ -1376,7 +1376,7 @@ Non-destructive.</value>
     <value>0</value>
   </data>
   <data name="WriteAverageLabel.Text" xml:space="preserve">
-    <value>写平均</value>
+    <value>Write Avg</value>
   </data>
   <data name="WriteBytesPerSecondStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 17</value>
@@ -1436,6 +1436,6 @@ Non-destructive.</value>
     <value>2</value>
   </data>
   <data name="WrittenLabel.Text" xml:space="preserve">
-    <value>已写</value>
+    <value>Written</value>
   </data>
 </root>

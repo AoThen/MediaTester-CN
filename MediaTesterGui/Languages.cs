@@ -10,6 +10,7 @@
 			// The name of the language should be the native spelling (only English should be in English)
 			// Alphabetize this list by language name rather than by ISO code
 			new LanguageCode("en", "English"),
+			new LanguageCode("zh-CN", "简体中文"),
 			//new LanguageCode("es", "Español")
 			//new LanguageCode("it", "Italiano")
 		};

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Text.Json;
+using System.Threading;
 
 namespace KrahmerSoft.MediaTesterLib
 {
@@ -13,6 +14,36 @@ namespace KrahmerSoft.MediaTesterLib
 		public bool SaveTestResultsFileToMedia { get; set; } = true;
 		public long MaxBytesToTest { get; set; } = -1;
 		public string LanguageCode { get; set; }
+
+		/// <summary>
+		/// Cancellation token source for graceful operation cancellation.
+		/// Replaces Thread.Abort() for cross-platform compatibility.
+		/// </summary>
+		[System.Text.Json.Serialization.JsonIgnore]
+		public CancellationTokenSource CancellationTokenSource { get; set; } = new CancellationTokenSource();
+
+		/// <summary>
+		/// Gets the cancellation token for checking cancellation requests.
+		/// </summary>
+		[System.Text.Json.Serialization.JsonIgnore]
+		public CancellationToken CancellationToken => CancellationTokenSource.Token;
+
+		/// <summary>
+		/// Requests cancellation of the current operation.
+		/// </summary>
+		public void Cancel()
+		{
+			CancellationTokenSource.Cancel();
+		}
+
+		/// <summary>
+		/// Resets the cancellation token for a new operation.
+		/// </summary>
+		public void ResetCancellation()
+		{
+			CancellationTokenSource?.Dispose();
+			CancellationTokenSource = new CancellationTokenSource();
+		}
 
 		public const string CONFIG_FILENAME = "MediaTesterOptions.json";
 

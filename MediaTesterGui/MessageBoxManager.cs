@@ -1,9 +1,13 @@
 ﻿#pragma warning disable 0618
 using System.Runtime.InteropServices;
+#if NETFRAMEWORK
 using System.Security.Permissions;
+#endif
 using System.Text;
 
+#if NETFRAMEWORK
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, UnmanagedCode = true)]
+#endif
 namespace System.Windows.Forms
 {
 	// Code from: https://www.codeproject.com/script/Articles/ViewDownloads.aspx?aid=18399
@@ -62,6 +66,10 @@ namespace System.Windows.Forms
 
 		[DllImport("user32.dll", EntryPoint = "SetWindowTextW", CharSet = CharSet.Unicode)]
 		private static extern bool SetWindowText(IntPtr hWnd, string lpString);
+
+		// P/Invoke for GetCurrentThreadId to replace deprecated AppDomain.GetCurrentThreadId()
+		[DllImport("kernel32.dll")]
+		private static extern int GetCurrentThreadId();
 
 
 		[StructLayout(LayoutKind.Sequential)]
@@ -128,7 +136,7 @@ namespace System.Windows.Forms
 		{
 			if (hHook != IntPtr.Zero)
 				throw new NotSupportedException("One hook per thread allowed.");
-			hHook = SetWindowsHookEx(WH_CALLWNDPROCRET, hookProc, IntPtr.Zero, AppDomain.GetCurrentThreadId());
+			hHook = SetWindowsHookEx(WH_CALLWNDPROCRET, hookProc, IntPtr.Zero, GetCurrentThreadId());
 		}
 
 		/// <summary>

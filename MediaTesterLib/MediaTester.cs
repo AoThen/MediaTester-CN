@@ -119,6 +119,13 @@ namespace KrahmerSoft.MediaTesterLib
 				int lastFileIndex = (int) ((Options.MaxBytesToTest + FILE_SIZE - 1) / FILE_SIZE) - 1;
 				for (int testFileIndex = 0; testFileIndex <= lastFileIndex; testFileIndex++)
 				{
+					// Check for cancellation request
+					if (Options.CancellationToken.IsCancellationRequested)
+					{
+						IsSuccess = false;
+						return false;
+					}
+
 					string testFilePath = GenerateTestFile(testFileIndex, FILE_SIZE, out int actualTestFileSize);
 					TotalGeneratedTestFileBytes += actualTestFileSize;
 					if (Options.QuickTestAfterEachFile && testFilePath != null)
@@ -226,6 +233,12 @@ namespace KrahmerSoft.MediaTesterLib
 					int lastDataBlockIndex = GetLastDataBlockIndex(actualTestFileSize);
 					for (int dataBlockIndex = 0; dataBlockIndex <= lastDataBlockIndex; dataBlockIndex++)
 					{
+						// Check for cancellation request
+						if (Options.CancellationToken.IsCancellationRequested)
+						{
+							return testFilePath;
+						}
+
 						int dataBlockSize = (dataBlockIndex == lastDataBlockIndex && actualTestFileSize % DATA_BLOCK_SIZE != 0)
 							? (int) (actualTestFileSize % DATA_BLOCK_SIZE) : DATA_BLOCK_SIZE;
 						long absoluteDataBlockIndex = GetAbsoluteDataBlockIndex(testFileIndex, dataBlockIndex);
@@ -383,6 +396,13 @@ namespace KrahmerSoft.MediaTesterLib
 
 			for (int testFileIndex = 0; ; testFileIndex++)
 			{
+				// Check for cancellation request
+				if (Options.CancellationToken.IsCancellationRequested)
+				{
+					IsSuccess = false;
+					return false;
+				}
+
 				string testFilePath = GetTestFilePath(testFileIndex);
 				if (!File.Exists(testFilePath))
 					break;
@@ -419,6 +439,14 @@ namespace KrahmerSoft.MediaTesterLib
 					double lastElapsedSeconds = 0;
 					for (int dataBlockIndex = 0; dataBlockIndex <= lastDataBlockIndex; dataBlockIndex++)
 					{
+						// Check for cancellation request
+						if (Options.CancellationToken.IsCancellationRequested)
+						{
+							success = false;
+							IsSuccess = false;
+							return false;
+						}
+
 						long absoluteDataBlockIndex = GetAbsoluteDataBlockIndex(testFileIndex, dataBlockIndex);
 						long absoluteDataByteIndex = GetAbsoluteDataByteIndex(testFileIndex, dataBlockIndex);
 						try
@@ -526,10 +554,7 @@ namespace KrahmerSoft.MediaTesterLib
 			thread.Start();
 
 			var dataBlock = ReadDataBlock(fileReader, dataBlockIndex, out readBytesPerSecond);
-			while (thread.ThreadState == System.Threading.ThreadState.Running)
-			{
-				Thread.Sleep(10);
-			}
+			thread.Join(); // Wait for data generation to complete (replaces polling loop)
 
 			return VerifyDataBlock(dataBlock, fileIndex, dataBlockIndex, out bytesVerified, out bytesFailed, knownGoodDataBlock: knownGoodDataBlock);
 		}

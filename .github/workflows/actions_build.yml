@@ -5,14 +5,14 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: windows-latest
     defaults:
       run:
         shell: bash
 
     steps:
     - name: Pull code from git
-      uses: actions/checkout@v4.1.7
+      uses: actions/checkout@main
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
@@ -63,7 +63,7 @@ jobs:
     #     path: _output/MediaTesterCli/*
 
     - name: Create artifact - MediaTesterGui-v${{ env.GUI_VER }}
-      uses: actions/upload-artifact@v4.3.4
+      uses: actions/upload-artifact@main
       with:
         name: MediaTesterGui-${{ env.GUI_VER }}
         path: _output/MediaTesterGui/*

@@ -369,6 +369,7 @@ namespace KrahmerSoft.MediaTesterGui
 		private void InitializeMediaTester()
 		{
 			UpdateOptionsFromUi();
+			_mediaTesterOptions.ResetCancellation(); // Reset cancellation token for new operation
 			_mediaTester = new MediaTester(_mediaTesterOptions);
 			_mediaTester.OnException += OnMediaTesterException;
 			_mediaTester.AfterQuickTest += AfterQuickTest;
@@ -576,11 +577,18 @@ namespace KrahmerSoft.MediaTesterGui
 		{
 			try
 			{
-				_mediaTesterThread?.Abort();
+				// Use CancellationToken for graceful cancellation instead of Thread.Abort()
+				// Thread.Abort() is not supported on .NET Core/.NET 5+ and is unsafe
+				if (_mediaTester != null)
+				{
+					_mediaTesterOptions.Cancel();
+					_mediaTesterThread?.Join(5000); // Wait up to 5 seconds for graceful shutdown
+				}
 				_startDateTime = null;
 			}
-			catch //(Exception ex)
+			catch (System.Threading.ThreadStateException)
 			{
+				// Thread may have already completed
 			}
 		}
 
@@ -622,11 +630,21 @@ namespace KrahmerSoft.MediaTesterGui
 		{
 			try
 			{
-				_mediaTesterThread?.Interrupt();
-				_mediaTesterThread?.Join();
+				// Request cancellation and wait for thread to complete gracefully
+				if (_mediaTesterThread != null && _mediaTesterThread.IsAlive)
+				{
+					_mediaTesterOptions?.Cancel();
+					if (!_mediaTesterThread.Join(3000)) // Wait up to 3 seconds
+					{
+						// Thread didn't exit gracefully, but we need to close
+						_mediaTesterThread?.Interrupt();
+						_mediaTesterThread?.Join(1000); // Give it one more second
+					}
+				}
 			}
-			catch
+			catch (System.Threading.ThreadStateException)
 			{
+				// Thread may have already completed
 			}
 		}
 

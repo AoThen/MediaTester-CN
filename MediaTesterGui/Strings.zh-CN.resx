@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnExceptionOccurredWhileTesting" xml:space="preserve">
+    <value>测试过程中发生异常。</value>
+  </data>
+  <data name="AverageReadSpeed" xml:space="preserve">
+    <value>平均读取速度</value>
+  </data>
+  <data name="AverageWriteSpeed" xml:space="preserve">
+    <value>平均写入速度</value>
+  </data>
+  <data name="BeSureToDeleteTemporaryDirectory" xml:space="preserve">
+    <value>注意：使用介质前请务必删除临时目录。</value>
+  </data>
+  <data name="ButtonNo" xml:space="preserve">
+    <value>否</value>
+    <comment>弹出消息框上的按钮文本</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>确定</value>
+    <comment>弹出消息框上的按钮文本</comment>
+  </data>
+  <data name="ButtonYes" xml:space="preserve">
+    <value>是</value>
+    <comment>弹出消息框上的按钮文本</comment>
+  </data>
+  <data name="Bytes" xml:space="preserve">
+    <value>字节</value>
+  </data>
+  <data name="BytesPerSecond" xml:space="preserve">
+    <value>字节/秒</value>
+  </data>
+  <data name="ChangeLanguageRestart" xml:space="preserve">
+    <value>更改语言需要重启</value>
+  </data>
+  <data name="ChangeLanguageRestartDetails" xml:space="preserve">
+    <value>应用程序必须重启才能更改语言。
+未保存的设置将丢失。
+是否继续？</value>
+  </data>
+  <data name="CheckDeviceAndFolderPermissions" xml:space="preserve">
+    <value>请检查设备和文件夹权限，或重新连接驱动器后重试。</value>
+  </data>
+  <data name="ContinueWithTest" xml:space="preserve">
+    <value>如果目标介质为空，MediaTester 效果最佳。
+是否继续执行非破坏性测试？</value>
+    <comment>开始测试对话框内容</comment>
+  </data>
+  <data name="ErrorLoadingOptions" xml:space="preserve">
+    <value>加载选项出错</value>
+  </data>
+  <data name="ErrorLoadingOptionsDetails" xml:space="preserve">
+    <value>加载选项配置文件时出错。
+将使用默认设置继续。</value>
+  </data>
+  <data name="ExceptionWhileRemovingTempFiles" xml:space="preserve">
+    <value>删除临时数据文件时发生异常。</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>失败</value>
+    <comment>用于结果文件名</comment>
+  </data>
+  <data name="FailedBlockByteIndex" xml:space="preserve">
+    <value>数据块 {AbsoluteDataBlockIndex} 失败！字节索引：{AbsoluteDataByteIndex}</value>
+  </data>
+  <data name="FailedWritingBlock" xml:space="preserve">
+    <value>写入数据块 {AbsoluteDataBlockIndex} 失败。字节索引：{AbsoluteDataByteIndex}。</value>
+  </data>
+  <data name="IdentifyingFirstFailingByte" xml:space="preserve">
+    <value>正在定位首个失败字节...</value>
+  </data>
+  <data name="InvalidLanguage" xml:space="preserve">
+    <value>无效语言</value>
+  </data>
+  <data name="InvalidLanguageDetails" xml:space="preserve">
+    <value>配置的语言名称 ({InvalidLanguageName}) 无效。
+将使用系统默认语言：{DefaultLanguageName}</value>
+  </data>
+  <data name="InvalidTarget" xml:space="preserve">
+    <value>无效目标</value>
+    <comment>无效目标对话框标题</comment>
+  </data>
+  <data name="MediaTestFailed" xml:space="preserve">
+    <value>介质测试失败！首个失败字节：{FirstFailingByteIndex}。已验证 {TotalBytesVerified} 字节。</value>
+  </data>
+  <data name="MediaTestPassed" xml:space="preserve">
+    <value>介质测试通过！</value>
+  </data>
+  <data name="NotEnoughFreeSpaceToWrite" xml:space="preserve">
+    <value>空间不足，无法写入测试结果文件</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>通过</value>
+    <comment>用于结果文件名</comment>
+  </data>
+  <data name="QuickTest" xml:space="preserve">
+    <value>快速测试</value>
+  </data>
+  <data name="Read" xml:space="preserve">
+    <value>读取</value>
+  </data>
+  <data name="RemovedTempDataFile" xml:space="preserve">
+    <value>已删除 {FilesDeleted} 个临时数据文件。</value>
+  </data>
+  <data name="RemovedTempDataFiles" xml:space="preserve">
+    <value>已删除 {FilesDeleted} 个临时数据文件。</value>
+  </data>
+  <data name="RemovingTempDataFiles" xml:space="preserve">
+    <value>正在删除临时数据文件...</value>
+  </data>
+  <data name="ResultsFilename" xml:space="preserve">
+    <value>MediaTester结果_{DateTime}_{PassFail}.txt</value>
+    <comment>结果文件名（无空格）</comment>
+  </data>
+  <data name="StartTest" xml:space="preserve">
+    <value>开始测试？</value>
+    <comment>开始测试对话框标题</comment>
+  </data>
+  <data name="SystemDefault" xml:space="preserve">
+    <value>系统默认</value>
+  </data>
+  <data name="TemporaryDataPath" xml:space="preserve">
+    <value>临时数据路径</value>
+  </data>
+  <data name="TheSelectedTargetIsInvalid" xml:space="preserve">
+    <value>所选目标无效或不存在！</value>
+    <comment>无效目标对话框内容</comment>
+  </data>
+  <data name="TheTestWasAborted" xml:space="preserve">
+    <value>测试已被用户中止。</value>
+  </data>
+  <data name="TotalReportedAvailableSpace" xml:space="preserve">
+    <value>报告的可用空间总计</value>
+  </data>
+  <data name="TotalReportedMediaSize" xml:space="preserve">
+    <value>报告的介质大小总计</value>
+  </data>
+  <data name="VerifiedBlockByteIndex" xml:space="preserve">
+    <value>已验证数据块 {AbsoluteDataBlockIndex}。字节索引：{AbsoluteDataByteIndex}</value>
+  </data>
+  <data name="VerifiedXBytesOfXTotal" xml:space="preserve">
+    <value>已验证 {TotalBytesVerified} 字节，共 {TargetTotalBytes} 字节。</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>写入</value>
+  </data>
+  <data name="WroteTestResultsFile" xml:space="preserve">
+    <value>已写入测试结果文件</value>
+  </data>
+</root>

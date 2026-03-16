@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MediaTester</value>
+  </data>
+  <data name="AbortButton.Text" xml:space="preserve">
+    <value>中止</value>
+  </data>
+  <data name="AbortButton.ToolTip" xml:space="preserve">
+    <value>中止当前操作。</value>
+  </data>
+  <data name="AboutButton.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="AboutButton.ToolTip" xml:space="preserve">
+    <value>显示关于和版权对话框。</value>
+  </data>
+  <data name="DefaultOptionsButton.Text" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="DefaultOptionsButton.ToolTip" xml:space="preserve">
+    <value>恢复默认应用程序选项。</value>
+  </data>
+  <data name="ElapsedLabel.Text" xml:space="preserve">
+    <value>已用</value>
+  </data>
+  <data name="FailedLabel.Text" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="LanguageComboBox.ToolTip" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="MaxBytesToTestComboBox.Items" xml:space="preserve">
+    <value>所有可用字节</value>
+  </data>
+  <data name="QuickFirstFailingByteMethodCheckBox.Text" xml:space="preserve">
+    <value>快速找到首个失败字节</value>
+  </data>
+  <data name="QuickFirstFailingByteMethodCheckBox.ToolTip" xml:space="preserve">
+    <value>如果遇到失败，跳过从头测试所有已写入文件。
+改为反向搜索最后一个成功字节。
+（推荐）</value>
+  </data>
+  <data name="QuickTestAfterEachFileCheckBox.Text" xml:space="preserve">
+    <value>每写一个GiB后快速测试</value>
+  </data>
+  <data name="QuickTestAfterEachFileCheckBox.ToolTip" xml:space="preserve">
+    <value>在写入数据时执行简短的抽查。
+启用此选项可以更快地检测常见故障。
+（推荐）</value>
+  </data>
+  <data name="ReadAverageLabel.Text" xml:space="preserve">
+    <value>读平均</value>
+  </data>
+  <data name="RemainingLabel.Text" xml:space="preserve">
+    <value>剩余</value>
+  </data>
+  <data name="RemoveTempDataFilesButton.Text" xml:space="preserve">
+    <value>删除临时文件</value>
+  </data>
+  <data name="RemoveTempDataFilesButton.ToolTip" xml:space="preserve">
+    <value>仅删除 MediaTester 创建的文件。</value>
+  </data>
+  <data name="RemoveTempDataFilesUponCompletionCheckBox.Text" xml:space="preserve">
+    <value>完成后删除临时文件</value>
+  </data>
+  <data name="RemoveTempDataFilesUponCompletionCheckBox.ToolTip" xml:space="preserve">
+    <value>验证完成后（通过或失败）删除临时数据文件。</value>
+  </data>
+  <data name="SaveOptionsButton.Text" xml:space="preserve">
+    <value>保存配置</value>
+  </data>
+  <data name="SaveOptionsButton.ToolTip" xml:space="preserve">
+    <value>将当前选项保存为下次启动的默认值。</value>
+  </data>
+  <data name="SaveTestResultsFileToMediaCheckBox.Text" xml:space="preserve">
+    <value>测试结果保存到根目录</value>
+  </data>
+  <data name="SaveTestResultsFileToMediaCheckBox.ToolTip" xml:space="preserve">
+    <value>将测试结果文件保存到介质，包含完整测试日志输出。
+MediaTester结果_YYYY-MM-DD_hh-mm-ss.txt
+如有必要，将删除临时测试数据文件以腾出空间存放测试结果文件。</value>
+  </data>
+  <data name="StatisticsGroupBox.Text" xml:space="preserve">
+    <value>统计数据</value>
+  </data>
+  <data name="StopProcessingOnFailureCheckBox.Text" xml:space="preserve">
+    <value>首次失败时停止</value>
+  </data>
+  <data name="StopProcessingOnFailureCheckBox.ToolTip" xml:space="preserve">
+    <value>单次失败后停止测试过程。
+（推荐）</value>
+  </data>
+  <data name="TargetAvailableBytesLabelLabel.Text" xml:space="preserve">
+    <value>可用空间</value>
+  </data>
+  <data name="TargetLabel.Text" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="TargetTotalBytesLabelLabel.Text" xml:space="preserve">
+    <value>总大小</value>
+  </data>
+  <data name="TestOptionsGgroupBox.Text" xml:space="preserve">
+    <value>测试选项</value>
+  </data>
+  <data name="TotalBytesToTestLabel.Text" xml:space="preserve">
+    <value>总测试字节</value>
+  </data>
+  <data name="VerifiedLabel.Text" xml:space="preserve">
+    <value>已验证</value>
+  </data>
+  <data name="VerifyOnlyButton.Text" xml:space="preserve">
+    <value>仅校验</value>
+  </data>
+  <data name="VerifyOnlyButton.ToolTip" xml:space="preserve">
+    <value>校验之前写入的测试数据。
+不会向介质写入任何内容。</value>
+  </data>
+  <data name="WriteAndVerifyButton.Text" xml:space="preserve">
+    <value>写后校验</value>
+  </data>
+  <data name="WriteAndVerifyButton.ToolTip" xml:space="preserve">
+    <value>向介质写入测试数据，然后读回以验证数据是否正确存储。
+仅使用可用空间。
+非破坏性。</value>
+  </data>
+  <data name="WriteAverageLabel.Text" xml:space="preserve">
+    <value>写平均</value>
+  </data>
+  <data name="WrittenLabel.Text" xml:space="preserve">
+    <value>已写入</value>
+  </data>
+</root>
