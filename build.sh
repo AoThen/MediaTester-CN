@@ -292,6 +292,11 @@ fi
 		rm -f ${OUTPUT_DIRECTORY}MediaTesterLib/*
 		
 		cp MediaTesterGui/bin/Release/net462/MediaTesterGui.exe ${OUTPUT_DIRECTORY}MediaTesterGui/
+		# Copy satellite assemblies for localization
+		if [ -d "MediaTesterGui/bin/Release/net462/zh-CN" ]; then
+			mkdir -p ${OUTPUT_DIRECTORY}MediaTesterGui/zh-CN
+			cp MediaTesterGui/bin/Release/net462/zh-CN/*.resources.dll ${OUTPUT_DIRECTORY}MediaTesterGui/zh-CN/ 2>/dev/null || true
+		fi
 		cp MediaTesterCli/bin/Release/net462/MediaTester.exe ${OUTPUT_DIRECTORY}MediaTesterCli/
 		cp MediaTesterLib/bin/Release/netstandard2.0/*.dll ${OUTPUT_DIRECTORY}MediaTesterLib/
 	fi

@@ -1,5 +1,6 @@
 ﻿using KrahmerSoft.MediaTesterLib;
 using System;
+using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -27,6 +28,7 @@ namespace KrahmerSoft.MediaTesterGui
 			Application.SetCompatibleTextRenderingDefault(false);
 
 			bool[] restartAfterClose = new bool[] { false };
+			string previousLanguage = null;
 			do
 			{
 				string language = mediaTesterOptions.LanguageCode;
@@ -37,12 +39,16 @@ namespace KrahmerSoft.MediaTesterGui
 					if (string.IsNullOrEmpty(language))
 						language = Thread.CurrentThread.CurrentCulture.Name;
 
-					// Don't truncate language code - full culture names like "zh-CN" are needed for proper resource loading
-					if (Thread.CurrentThread.CurrentCulture.Name != language)
+					// Only set culture if it's different from what we had before
+					// This ensures resources are reloaded when language changes
+					if (previousLanguage != language)
 					{
-						Thread.CurrentThread.CurrentCulture =
-							Thread.CurrentThread.CurrentUICulture =
-							new System.Globalization.CultureInfo(language);
+						var newCulture = new CultureInfo(language);
+						Thread.CurrentThread.CurrentCulture = newCulture;
+						Thread.CurrentThread.CurrentUICulture = newCulture;
+						CultureInfo.DefaultThreadCurrentCulture = newCulture;
+						CultureInfo.DefaultThreadCurrentUICulture = newCulture;
+						previousLanguage = language;
 					}
 				}
 				catch

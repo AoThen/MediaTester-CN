@@ -33,23 +33,17 @@
   <data name="DefaultOptionsButton.ToolTip" xml:space="preserve">
     <value>恢复默认应用程序选项。</value>
   </data>
-  <data name="ElapsedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
-  </data>
   <data name="ElapsedLabel.Text" xml:space="preserve">
     <value>已用</value>
   </data>
   <data name="ElapsedTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 119</value>
-  </data>
-  <data name="FailedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
+    <value>45, 119</value>
   </data>
   <data name="FailedLabel.Text" xml:space="preserve">
     <value>失败</value>
   </data>
   <data name="FailedBytesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 100</value>
+    <value>45, 100</value>
   </data>
   <data name="LanguageComboBox.ToolTip" xml:space="preserve">
     <value>语言</value>
@@ -73,20 +67,14 @@
 启用此选项可以更快地检测常见故障。
 （推荐）</value>
   </data>
-  <data name="ReadAverageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
-  </data>
   <data name="ReadAverageLabel.Text" xml:space="preserve">
     <value>读平均</value>
-  </data>
-  <data name="RemainingLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
   </data>
   <data name="RemainingLabel.Text" xml:space="preserve">
     <value>剩余</value>
   </data>
   <data name="TotalTimeRemainingLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 139</value>
+    <value>45, 139</value>
   </data>
   <data name="RemoveTempDataFilesButton.Text" xml:space="preserve">
     <value>删除临时文件</value>
@@ -124,71 +112,47 @@ MediaTester结果_YYYY-MM-DD_hh-mm-ss.txt
     <value>单次失败后停止测试过程。
 （推荐）</value>
   </data>
-  <data name="TargetLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 13</value>
-  </data>
   <data name="TargetLabel.Text" xml:space="preserve">
     <value>目标</value>
   </data>
   <data name="TargetTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 22</value>
-  </data>
-  <data name="TargetTotalBytesLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
+    <value>45, 22</value>
   </data>
   <data name="TargetTotalBytesLabelLabel.Text" xml:space="preserve">
     <value>总大小</value>
   </data>
   <data name="TargetTotalBytesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 44</value>
-  </data>
-  <data name="TargetAvailableBytesLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 13</value>
+    <value>65, 44</value>
   </data>
   <data name="TargetAvailableBytesLabelLabel.Text" xml:space="preserve">
     <value>可用空间</value>
   </data>
   <data name="TargetAvailableBytesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 59</value>
+    <value>65, 59</value>
   </data>
   <data name="TestOptionsGgroupBox.Text" xml:space="preserve">
     <value>测试选项</value>
   </data>
-  <data name="TotalBytesToTestLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
   <data name="TotalBytesToTestLabel.Text" xml:space="preserve">
     <value>总测试字节</value>
   </data>
-  <data name="MaxBytesToTestComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 21</value>
-  </data>
   <data name="MaxBytesToTestComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 74</value>
-  </data>
-  <data name="VerifiedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
   </data>
   <data name="VerifiedLabel.Text" xml:space="preserve">
     <value>已验证</value>
   </data>
   <data name="VerifiedBytesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 80</value>
-  </data>
-  <data name="WriteAverageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+    <value>55, 80</value>
   </data>
   <data name="WriteAverageLabel.Text" xml:space="preserve">
     <value>写平均</value>
-  </data>
-  <data name="WrittenLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
   </data>
   <data name="WrittenLabel.Text" xml:space="preserve">
     <value>已写入</value>
   </data>
   <data name="WrittenBytesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 62</value>
+    <value>55, 62</value>
   </data>
   <data name="VerifyOnlyButton.Text" xml:space="preserve">
     <value>仅校验</value>

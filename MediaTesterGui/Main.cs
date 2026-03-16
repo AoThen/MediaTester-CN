@@ -68,7 +68,10 @@ namespace KrahmerSoft.MediaTesterGui
 
 		private void SelectCurrentLanguageCode()
 		{
-			string selectCode = Thread.CurrentThread.CurrentCulture.Name;
+			// Use saved language code from options if available, otherwise use current culture
+			string selectCode = !string.IsNullOrEmpty(_mediaTesterOptions?.LanguageCode)
+				? _mediaTesterOptions.LanguageCode
+				: Thread.CurrentThread.CurrentUICulture.Name;
 			if (!SelectLanguageCode(selectCode))
 				SelectLanguageCode(Languages.Default);
 		}
@@ -654,20 +657,28 @@ namespace KrahmerSoft.MediaTesterGui
 				return;
 
 			string languageCode = (LanguageComboBox.SelectedItem as Languages.LanguageCode)?.Code;
-			if (languageCode == Thread.CurrentThread.CurrentCulture.Name)
+			if (string.IsNullOrEmpty(languageCode))
+				return;
+
+			// Compare with CurrentUICulture which is used for resource loading
+			if (languageCode == Thread.CurrentThread.CurrentUICulture.Name)
 				return;
 
 			var requestedCulture = new System.Globalization.CultureInfo(languageCode);
 			string changeLanguageRestartDetails = Strings.ResourceManager.GetString(nameof(Strings.ChangeLanguageRestartDetails), requestedCulture)
-				+ $"\n\n{Strings.ChangeLanguageRestartDetails}";
-			string changeLanguageRestart = Strings.ResourceManager.GetString(nameof(Strings.ChangeLanguageRestart), requestedCulture);
+				?? Strings.ChangeLanguageRestartDetails;
+			string changeLanguageRestart = Strings.ResourceManager.GetString(nameof(Strings.ChangeLanguageRestart), requestedCulture)
+				?? Strings.ChangeLanguageRestart;
 
 			if (MessageBox.Show(changeLanguageRestartDetails, changeLanguageRestart, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
 				_mediaTesterOptions.LanguageCode = languageCode;
+				SaveOptions(); // Save options before restart
 
 				if (_restartAfterClose != null && _restartAfterClose.Length > 0)
+				{
 					_restartAfterClose[0] = true;
+				}
 				Close();
 			}
 			else
