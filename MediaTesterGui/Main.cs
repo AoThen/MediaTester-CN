@@ -649,6 +649,16 @@ namespace KrahmerSoft.MediaTesterGui
 			{
 				// Thread may have already completed
 			}
+
+			// Unregister MessageBoxManager to allow restart
+			try
+			{
+				MessageBoxManager.Unregister();
+			}
+			catch
+			{
+				// Ignore errors during unregister
+			}
 		}
 
 		private void LanguageComboBox_SelectedValueChanged(object sender, EventArgs e)
